@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2026-08-24 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "default_currency",
+  "portal_path",
+  "integration_section",
+  "contract_version",
+  "provider_path"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency"
+  },
+  {
+   "default": "/commerce",
+   "description": "Future customer portal base path. Relative paths and HTTPS URLs are supported.",
+   "fieldname": "portal_path",
+   "fieldtype": "Data",
+   "label": "Portal Path",
+   "reqd": 1
+  },
+  {
+   "fieldname": "integration_section",
+   "fieldtype": "Section Break",
+   "label": "LMS Integration"
+  },
+  {
+   "default": "1",
+   "fieldname": "contract_version",
+   "fieldtype": "Int",
+   "label": "Entitlement Contract Version",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "frappe_lms_commerce.commerce.integrations.lms.decide_many",
+   "fieldname": "provider_path",
+   "fieldtype": "Data",
+   "label": "Entitlement Provider",
+   "read_only": 1
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-08-24 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Commerce",
+ "name": "Commerce Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Commerce Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Commerce Viewer"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
