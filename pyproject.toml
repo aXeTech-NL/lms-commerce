@@ -1,0 +1,46 @@
+[project]
+name = "frappe_lms_commerce"
+version = "0.1.0"
+description = "External commerce and entitlement management for Frappe LMS"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "license.txt" }
+authors = [
+    { name = "aXeTech", email = "info@axetech.nl" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+
+[project.urls]
+Repository = "https://github.com/aXeTech-NL/lms-commerce"
+Issues = "https://github.com/aXeTech-NL/lms-commerce/issues"
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=16.0.0,<17.0.0"
+lms = ">=2.61.0,<3.0.0"
+payments = ">=0.0.1,<1.0.0"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP", "W"]
+ignore = ["B904", "E501", "W191"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"
+docstring-code-format = true

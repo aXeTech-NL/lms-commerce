@@ -1,0 +1,119 @@
+{
+ "app": "frappe_lms_commerce",
+ "charts": [],
+ "content": "[{\"id\":\"commerce-header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Commerce</b></span>\",\"col\":12}},{\"id\":\"commerce-settings\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commerce Settings\",\"col\":3}},{\"id\":\"commerce-tiers\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commerce Tiers\",\"col\":3}},{\"id\":\"commerce-offerings\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commerce Offerings\",\"col\":3}},{\"id\":\"commerce-entitlements\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commerce Entitlements\",\"col\":3}},{\"id\":\"commerce-spacer\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"commerce-master\",\"type\":\"card\",\"data\":{\"card_name\":\"Commerce Configuration\",\"col\":6}},{\"id\":\"commerce-access\",\"type\":\"card\",\"data\":{\"card_name\":\"Commerce Access\",\"col\":6}}]",
+ "creation": "2026-08-24 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "credit-card",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Commerce",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Commerce Configuration",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 0,
+   "link_to": "Commerce Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tiers",
+   "link_count": 0,
+   "link_to": "Commerce Tier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Offerings",
+   "link_count": 0,
+   "link_to": "Commerce Offering",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Commerce Access",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Entitlements",
+   "link_count": 0,
+   "link_to": "Commerce Entitlement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-24 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Commerce",
+ "name": "Commerce",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {"role": "Commerce Manager"},
+  {"role": "Commerce Viewer"},
+  {"role": "System Manager"}
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "Form",
+   "label": "Commerce Settings",
+   "link_to": "Commerce Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Commerce Tiers",
+   "link_to": "Commerce Tier",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Commerce Offerings",
+   "link_to": "Commerce Offering",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Commerce Entitlements",
+   "link_to": "Commerce Entitlement",
+   "type": "DocType"
+  }
+ ],
+ "title": "Commerce",
+ "type": "Workspace"
+}

@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-24 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "enabled",
+  "target_section",
+  "target_doctype",
+  "target_name",
+  "active_target_key",
+  "access_section",
+  "access_policy",
+  "required_tier",
+  "column_break_price",
+  "amount",
+  "currency",
+  "presentation_section",
+  "badge_label",
+  "purchase_url",
+  "upgrade_url"
+ ],
+ "fields": [
+  {
+   "default": "COF-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "COF-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "target_section",
+   "fieldtype": "Section Break",
+   "label": "LMS Target"
+  },
+  {
+   "fieldname": "target_doctype",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Target Type",
+   "options": "LMS Course\nLMS Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_name",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Target",
+   "options": "target_doctype",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "active_target_key",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Active Target Key",
+   "length": 300,
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "access_section",
+   "fieldtype": "Section Break",
+   "label": "Access Policy"
+  },
+  {
+   "default": "Free",
+   "fieldname": "access_policy",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Access Policy",
+   "options": "Free\nTier\nPurchase\nTier or Purchase",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.access_policy == 'Tier' || doc.access_policy == 'Tier or Purchase'",
+   "fieldname": "required_tier",
+   "fieldtype": "Link",
+   "label": "Required Tier",
+   "options": "Commerce Tier"
+  },
+  {
+   "fieldname": "column_break_price",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.access_policy == 'Purchase' || doc.access_policy == 'Tier or Purchase'",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "One-time Amount",
+   "options": "currency"
+  },
+  {
+   "depends_on": "eval:doc.access_policy == 'Purchase' || doc.access_policy == 'Tier or Purchase'",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "presentation_section",
+   "fieldtype": "Section Break",
+   "label": "Catalog Presentation"
+  },
+  {
+   "description": "Optional label shown instead of the policy or tier name.",
+   "fieldname": "badge_label",
+   "fieldtype": "Data",
+   "label": "Badge Label"
+  },
+  {
+   "description": "Optional relative or HTTPS purchase URL. The future Commerce portal route is used when empty.",
+   "fieldname": "purchase_url",
+   "fieldtype": "Data",
+   "label": "Purchase URL"
+  },
+  {
+   "description": "Optional relative or HTTPS upgrade URL. The future Commerce portal route is used when empty.",
+   "fieldname": "upgrade_url",
+   "fieldtype": "Data",
+   "label": "Upgrade URL"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-24 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Commerce",
+ "name": "Commerce Offering",
+ "naming_rule": "By naming series",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Commerce Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Commerce Viewer"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}

@@ -1,0 +1,14 @@
+include *.md
+include *.txt
+recursive-include docs *.md
+recursive-include frappe_lms_commerce *.css
+recursive-include frappe_lms_commerce *.csv
+recursive-include frappe_lms_commerce *.html
+recursive-include frappe_lms_commerce *.ico
+recursive-include frappe_lms_commerce *.js
+recursive-include frappe_lms_commerce *.json
+recursive-include frappe_lms_commerce *.md
+recursive-include frappe_lms_commerce *.png
+recursive-include frappe_lms_commerce *.py
+recursive-include frappe_lms_commerce *.svg
+recursive-exclude frappe_lms_commerce *.pyc
