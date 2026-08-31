@@ -20,8 +20,8 @@ classifiers = [
 ]
 
 [project.urls]
-Repository = "https://github.com/aXeTech-NL/lms-commerce"
-Issues = "https://github.com/aXeTech-NL/lms-commerce/issues"
+Repository = "https://github.com/aXeTech-NL/frappe-lms-commerce"
+Issues = "https://github.com/aXeTech-NL/frappe-lms-commerce/issues"
 
 [build-system]
 requires = ["flit_core >=3.4,<4"]

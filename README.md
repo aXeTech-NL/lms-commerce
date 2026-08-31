@@ -51,7 +51,7 @@ The LMS site must include the generic external entitlement bridge that provides 
 From a Frappe v16 Bench:
 
 ```bash
-bench get-app https://github.com/aXeTech-NL/lms-commerce.git
+bench get-app https://github.com/aXeTech-NL/frappe-lms-commerce.git
 bench --site <site> install-app frappe_lms_commerce
 bench --site <site> migrate
 ```
